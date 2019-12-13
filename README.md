@@ -44,4 +44,7 @@ System.setProperty("webdriver.chrome.driver", "path of chromedriver");
 - KeyDown
 - MoveToElement();
 
+## Selenium Grid
+Selenium gris is a proxy server that routes commands to remote browser instance
+
 

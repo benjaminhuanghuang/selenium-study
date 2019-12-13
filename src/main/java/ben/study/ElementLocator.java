@@ -21,6 +21,9 @@ public class ElementLocator {
         // <input id="q">
         element = driver.findElement(By.cssSelector("input[id='q']"));
 
+        // By Css
+        element = driver.findElement(By.cssSelector(".btn.btn-lg.btn-primary"));
+
         // By XPath
         element = driver.findElement(By.xpath("html/body/div/div[3]/input"));
         /**

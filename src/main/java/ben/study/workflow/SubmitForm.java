@@ -1,10 +1,15 @@
 package ben.study.workflow;
 
+import ben.study.workflow.pages.ConfirmationPage;
+import ben.study.workflow.pages.FormPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.junit.jupiter.api.Assertions;
 
 public class SubmitForm
 {
@@ -16,25 +21,19 @@ public class SubmitForm
 
         driver.get("https://formy-project.herokuapp.com/form");
 
-        driver.findElement(By.id("first-name")).sendKeys("John");
+        FormPage formPage = new FormPage();
+        formPage.submitForm(driver);
 
-        driver.findElement(By.id("last-name")).sendKeys("Doe");
+        ConfirmationPage confirmationPage = new ConfirmationPage();
+        confirmationPage.waitForAlertBanner(driver);
 
-        driver.findElement(By.id("job-title")).sendKeys("QA Engineer");
-
-        driver.findElement(By.id("radio-button-2")).click();
-
-        driver.findElement(By.id("checkbox-2")).click();
-
-        driver.findElement(By.cssSelector("option[value='1']")).click();
-
-        driver.findElement(By.id("datepicker")).sendKeys("05/28/2019");
-        driver.findElement(By.id("datepicker")).sendKeys(Keys.RETURN);
-
-        driver.findElement(By.cssSelector(".btn.btn-lg.btn-primary")).click();
+        Assertions.assertEquals("The form was successfully submitted!", confirmationPage.getAlertBannerText(driver));
 
         Thread.sleep(2000);
 
         driver.quit();
     }
+
+
+
 }
