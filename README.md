@@ -8,8 +8,6 @@
 - 2009 Selenium WebDriver 2.0
 - 2016 Selenium WebDriver 3.0
 
-
-
 ## Tools
 
 ### Browser Driver
@@ -26,16 +24,24 @@ Browser driver runs Selenium WebDriver tests in browser
 Maintain a standardized API, Emulate actions of users
 Communicate between test script and browser
 
-## Ways of driver.findElement
+## Selenium API
+### Set the location of chrome driver
+System.setProperty("webdriver.chrome.driver", "path of chromedriver");
+
+### driver.findElement
 - By.Name
 - By.ClassName
 - By.Id
 - By.XPath
+- Link text
+- Tag Name
 
-## Perform actions
+### Perform actions
 - element.sendKeys();
 - element.submit();
 - Click
 - dragAndDrop
 - KeyDown
 - MoveToElement();
+
+
