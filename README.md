@@ -7,4 +7,6 @@
 
 Selenium + Chrome + Java / Python
 
+testng for assertion
+
 

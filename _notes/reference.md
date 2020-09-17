@@ -5,5 +5,9 @@
 - [Selenium Essential Training](https://www.linkedin.com/learning/selenium-essential-training/)
 
 
+
+## The web site for testing
+- https://the-internet.herokuapp.com/
+
     
 

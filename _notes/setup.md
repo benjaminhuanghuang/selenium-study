@@ -3,7 +3,11 @@ Download ChromeDirver from (https://chromedriver.chromium.org/)
 
 Put the ChromeDirver into the project folder
 ```
-/resource
+/resources
+```
+In source code add 
+```
+ System.setProperty("webdriver.chrome.driver","resources/chromedriver");
 ```
 ## Dependency
 ```
