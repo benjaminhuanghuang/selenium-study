@@ -13,7 +13,12 @@ In source code add
 ```
  <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-server</artifactId>
-    <version>3.11.0</version>
+    <artifactId>selenium-chrome-driver</artifactId>
+    <version>${selenium.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-support</artifactId>
+      <version>${selenium.version}</version>
   </dependency>
 ```
